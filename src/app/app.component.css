@@ -1,0 +1,95 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #E0E0E0;
+    overflow: hidden;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper div {
+    margin: 10px;
+}
+
+.media {
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.media-img {
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.layer {
+    opacity: 0;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10px;
+    height: 90%;
+    background: #FFF;
+    color: #151E3F;
+    transition: all 0.9s ease;
+}
+
+p {
+    font-family: 'Inconsolata', monospace;
+    text-align: center;
+    font-size: 15px;
+    letter-spacing: 1px;
+    transition: all 0.9s ease;
+    transform: scale(0.1)
+}
+
+.media:hover .layer {
+    opacity: 0.8;
+    width: 90%;
+    transition: all 0.5s ease;
+}
+
+.media:hover .layer p {
+    transform: scale(1);
+    transition: all 0.9s ease;
+}
+
+.triangle {
+    border-style: solid;
+    height: 0px;
+    width: 0px;
+}
+
+.triangle-right {
+    border-color: transparent transparent transparent rgba(0, 0, 0, 0.3);
+    border-width: 20px 0px 20px 20px;
+}
+
+.triangle-left {
+    border-color: transparent rgba(0, 0, 0, 0.3) transparent transparent;
+    border-width: 20px 20px 20px 0px;
+}
+
+@media (max-width: 800px) {
+    .container {
+        transform: scale(0.6);
+    }
+}
+
+@media (max-width: 600px) {
+    .wrapper {
+        display: block;
+    }
+}

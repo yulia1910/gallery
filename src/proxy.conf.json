@@ -1,0 +1,6 @@
+{
+    "/api": {
+    "target": "https://localhost:44385/Gallery/1",
+    "secure": false
+    }
+    }
