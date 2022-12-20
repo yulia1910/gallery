@@ -7,7 +7,7 @@ import { catchError, map, Observable, throwError } from 'rxjs';
 })
 export class HttpService {
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) { }      
 
   public httpGet(url: string): Observable<any>{
     let headers = new HttpHeaders();
@@ -19,11 +19,11 @@ export class HttpService {
       map((response) => {
         return response.body
       }),
-      catchError((error) => this.handleError(error))
+      catchError((error) => this.handleError1(error))
     )
   }
 
-  handleError(response: Response | any): Observable<any>{
+  handleError1(response: Response | any): Observable<any>{
     const error = {
       message: response.message,
       httpStatusCode: response.status,
